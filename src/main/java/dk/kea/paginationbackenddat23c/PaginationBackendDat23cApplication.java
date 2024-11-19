@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class PaginationBackendDat23cApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(PaginationBackendDat23cApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(PaginationBackendDat23cApplication.class, args);
+    }
 
 }
