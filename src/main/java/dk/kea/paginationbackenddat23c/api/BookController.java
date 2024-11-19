@@ -2,6 +2,7 @@ package dk.kea.paginationbackenddat23c.api;
 
 import dk.kea.paginationbackenddat23c.entity.Book;
 import dk.kea.paginationbackenddat23c.service.BookService;
+import dk.kea.paginationbackenddat23c.service.JwtUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
