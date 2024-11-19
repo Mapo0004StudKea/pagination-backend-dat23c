@@ -29,7 +29,7 @@ import java.util.Map;
 @AllArgsConstructor
 @NoArgsConstructor
 //@RequestMapping("/api/books")
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+//@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class BookController {
 
     private BookService bookService;
