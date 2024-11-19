@@ -32,11 +32,12 @@ import java.util.Map;
 //@CrossOrigin(origins = "*", allowedHeaders = "*") //skal fjernes når config i Spring Security
 public class BookController {
 
+    @Autowired
     private BookService bookService;
 
-    public BookController(BookService bookService) {
-        this.bookService = bookService;
-    }
+    //public BookController(BookService bookService) {
+    //    this.bookService = bookService;
+    //}
 
     @Autowired
     private JwtUserDetailsService userDetailsService;
