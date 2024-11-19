@@ -1,8 +1,15 @@
 package dk.kea.paginationbackenddat23c.api;
 
+import dk.kea.paginationbackenddat23c.JwtTokenManager;
+import dk.kea.paginationbackenddat23c.service.IUserService;
 import dk.kea.paginationbackenddat23c.entity.Book;
+import dk.kea.paginationbackenddat23c.entity.JwtRequestModel;
+import dk.kea.paginationbackenddat23c.entity.JwtResponseModel;
+import dk.kea.paginationbackenddat23c.entity.User;
 import dk.kea.paginationbackenddat23c.service.BookService;
 import dk.kea.paginationbackenddat23c.service.JwtUserDetailsService;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -19,7 +26,9 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/books")
+@AllArgsConstructor
+@NoArgsConstructor
+//@RequestMapping("/api/books")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class BookController {
 
@@ -93,7 +102,7 @@ public class BookController {
         return ResponseEntity.ok(map);
     }
 
-    @GetMapping
+    @GetMapping("/api/books")
     public Page<Book> getAllBooks(Pageable pageable) {
         return bookService.getAllBooks(pageable);
     }
