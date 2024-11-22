@@ -62,5 +62,8 @@ public class SecurityConfiguration implements WebMvcConfigurer {
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "HEAD", "OPTIONS") // decide which methods to allow
                 .allowCredentials(true);
     }
-
+    // hvis man skal køre på en virtuel maskine skal .allowedOriginPatterns("http://localhost:*")
+    // ændres til "http://*:*"
+    // med certifikat skal det være "https://*:*"
+    // certifikat køre på port 443, 80
 }
